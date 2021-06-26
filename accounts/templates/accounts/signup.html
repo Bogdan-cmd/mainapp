@@ -6,7 +6,9 @@
 
 <div class="container">
   <h1>Înregistrează-te acum!</h1>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="{% static "https://www.google.com/recaptcha/api.js" async defer %}">
+
+  </script>
   <form method="POST">
     {% csrf_token %}
     {{ form|crispy }}
