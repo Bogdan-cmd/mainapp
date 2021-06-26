@@ -139,7 +139,7 @@ INTERNAL_IPS = [
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 #STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
 
@@ -176,11 +176,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 AWS_ACCESS_KEY_ID = 'AKIAUMBG4NF3QYPOEOQC'
 AWS_SECRET_ACCESS_KEY = '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'
-#AWS_STORAGE_BUCKET_NAME = 'chatnwrite-bucket'
+AWS_STORAGE_BUCKET_NAME = 'django-media-mybucket'
 
 
-#AWS_S3_FILE_OVERWRITE = False
-#AWS_DEFAULT_ACL = None
-#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
 
-#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
