@@ -6,10 +6,10 @@
 
 <div class="container">
   <h1>Înregistrează-te acum!</h1>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <form method="POST">
     {% csrf_token %}
     {{ form|crispy }}
-    <script src='https://www.google.com/recaptcha/api.js'></script>
     <div class="g-recaptcha" data-sitekey="6Lc2a1sbAAAAALTSMp1BR1Pfd6PoPYr-xkp71CgK"></div>
     <input type="submit" class="btn btn-primary" value="Înregistrează-te!">
   </form>
