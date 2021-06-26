@@ -13,11 +13,11 @@ class Profile(models.Model):
         return "@{}".format(self.user.username)
         #username e built in attribute
 
-    def save(self,*args,**kwargs):
-        super(Profile,self).save(*args,**kwargs)
+    #def save(self,*args,**kwargs):
+        #super(Profile,self).save(*args,**kwargs)
 
-        img = Image.open(self.image.path) #deschide poza instantei curente
-        if img.height > 250 or img.width > 250:
-            output_size = (250,250)
-            img.thumbnail(output_size)
-            img.save(self.image.path)
+        #img = Image.open(self.image.path) #deschide poza instantei curente
+        #if img.height > 250 or img.width > 250:
+            #output_size = (250,250)
+            #img.thumbnail(output_size)
+            #img.save(self.image.path)

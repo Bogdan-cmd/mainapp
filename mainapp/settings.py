@@ -138,6 +138,7 @@ INTERNAL_IPS = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 #STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
@@ -146,7 +147,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 #MEDIA_URL = '/media/'
 MEDIA_URL = '/media/'
-STATIC_URL = '/static/'
+
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
@@ -173,8 +174,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 #S3 BUCKETS - AWS CONFIG
 
-#AWS_ACCESS_KEY_ID = 'AKIAUMBG4NF363CUTT6P'
-#AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'AKIAUMBG4NF3QYPOEOQC'
+AWS_SECRET_ACCESS_KEY = '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'
 #AWS_STORAGE_BUCKET_NAME = 'chatnwrite-bucket'
 
 
