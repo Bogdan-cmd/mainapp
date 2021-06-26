@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'writers',
     'crispy_forms',
     'blog',
-    'debug_toolbar',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -141,7 +141,7 @@ INTERNAL_IPS = [
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
@@ -168,3 +168,14 @@ MESSAGE_TAGS = {
  }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+#S3 BUCKETS - AWS CONFIG
+
+AWS_ACCESS_KEY_ID = 'AKIAUMBG4NF363CUTT6P'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'chatnwrite-bucket'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
