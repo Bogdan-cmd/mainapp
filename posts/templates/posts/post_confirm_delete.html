@@ -1,0 +1,18 @@
+{% extends "posts/post_base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+<h3>Ești sigur că vrei să ștergi această postare?</h3> <br><br>
+
+<div class="posts">
+  {% include "posts/_post.html" with post=object hide_delete=True %}
+</div>
+
+<form method="post">
+  {% csrf_token %}
+  <input type="submit" class="btn btn-danger btn-large" value="Șterge">
+  <a href="{% url 'posts:single' username=user.username pk=object.pk %}"
+     class="btn btn-simple btn-large btn-info"
+  >Înapoi</a>
+</form>
+{% endblock  %}

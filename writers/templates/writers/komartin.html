@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block title %}Claudiu Komartin{% endblock title %}
+
+{% block content %}
+
+<h1 class="part-writer">Claudiu Komartin</h1> &nbsp;
+<div class="image-container">
+  <img src="{% static 'writers/rsz_komartin.jpg' %}" alt="Claudiu Komartin" class="detail-photo" style="display:block; width:120%; margin-left: auto; margin-right: auto;">
+</div>
+
+<br><br>
+
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-5">Despre</h1>
+  <p class="lead"> <strong>CLAUDIU KOMARTIN</strong> s-a născut pe 7 august 1983, în București. Este poet și traducător român. A fost student al Facultății de Limbi Străine de Litere din București, însă și-a abandonat studiile pentru a se dedica literaturii. A debutat publicistic în 2002, iar în volum un an mai târziu, cu volumul <em>Păpușarul și alte insomnii</em>. Din 2010, este redactor-șef al revistei „Poesis internațional” și al „Casei de Editură Max Blecher". Împreună cu <a href="{% url 'writers:vancu' %}">Radu Vancu</a>, a alcătuit antologiile "Cele mai frumoase poeme din 2010", la care se adaugă anii 2011 și 2012, toate antologiile apărute la editura Tracus Arte. Din 2009 organizează seria de întâlniri și lecturi publice „Institutul Blecher”, iar din 2019 devine vicepreședinte al PEN România. </p>
+  <hr class="my-4">
+
+  <h1 class="display-5">Opere literare</h1>
+    <p class="lead"><strong>Amintim unele din cele mai cunoscute opere ale scriitorului: </strong>
+    </p>
+
+  <ul><p class="lead"><strong>Poezie:</strong></p>
+    <li> Păpușarul și alte insomnii, Vinea, 2003 - Premiul național de poezie „Mihai Eminescu” pentru debut pe anul 2003, Premiul „Iustin Panța” pentru debut în poezie, Premiul pentru debut al revistei „România literară” pe anul 2003 </li>
+    <li> Circul domestic, Cartea Românească, 2005 - Premiul „Mihai Eminescu” al Academiei Române pe anul 2005 </li>
+    <li> Un anotimp în Berceni, Cartier, 2009 </li>
+    <li> cobalt, Casa de Editură Max Blecher, 2013 </li>
+    <li> Maeștrii unei arte muribunde. Poeme alese 2010-2017, Cartier, 2017 - Premiul „Matei Brâncoveanu” pentru literatură pe anul 2017, Premiul „Cartea de poezie a anului 2017” acordat la Festivalul național „George Bacovia”, Premiul „PEN România” </li>
+  </ul>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Interviuri</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bGCqzLk4uHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oMr27_WEDVE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KBJqg_OejyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Poezii ale scriitorului</h1>
+  <li> <em><b>Încercăm să convingem nebunia</em></b> <br><br>
+    Creierul meu dă cu mine de toţi pereţii, <br>
+    creierul tău e un marţian rătăcit <br>
+    care caută în pilaf sensul vieţii. <br>
+    <br><br>
+    Tu, la o adică, ai putea veni mai aproape, <br>
+    te-ai putea muta cu mine aici, între ape. <br>
+    Arterele noastre vor depăşi repede tracul – <br>
+    curând, ne vom râcâi împreună <br>
+    disperarea cu şpaclul. <br>
+    <br><br>
+    Încercăm să convingem nebunia <br>
+    să respecte un ritm cunoscut. <br>
+    Într-o zi, lumea asta o să ne coasă gurile <br>
+    cu catgut. <br>
+  </li>
+  <br>
+<li> <em><b>Vreau să te cred când spui</em></b> <br><br>
+  că va veni cineva <br>
+  cu un zâmbet perfect <br>
+  şi cu gesturi definitive <br>
+  o insectă cu suflet de doică <br>
+  să mă ducă spre ziua de mâine <br>
+  cum duci un cal dărâmat de tristeţe <br>
+  seara către abator <br>
+</li>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Comandă cărțiile scriitorului: </h1>
+  <div class="row">
+    <div class="col-md-4 col-xs-12">
+      <a href="https://maxblecher.ro/cobalt.htm">
+        <img src="{% static 'writers/maxblecher.png' %}" alt="Elefant" class='img-comanda'>
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <a href="https://carturesti.ro/autor/claudiu_komartin">
+        <img src="{% static 'writers/carturesti.jpg' %}" alt="Cărturești" class='img-comanda'>
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <a href="https://www.libris.ro/maestrii-unei-arte-muribunde-claudiu-komartin-COD978-9975-86-275-2--p1257515.html">
+        <img src="{% static 'writers/libris.jpg' %}" alt="libris" class='img-comanda'>
+      </a>
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock content %}

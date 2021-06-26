@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block title %}Gabriel Liiceanu{% endblock title %}
+
+{% block content %}
+
+<h1 class="part-writer">Gabriel Liiceanu</h1> &nbsp;
+<div class="image-container">
+  <img src="{% static 'writers/rsz_liiceanu.jpg' %}" alt="Gabriel Liiceanu" class="detail-photo">
+</div>
+
+<br><br>
+
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-5">Despre</h1>
+  <p class="lead"> <strong>GABRIEL LIICEANU</strong> s-a născut pe 23 mai 1942, în Râmnicu Vâlcea. Este un filozof, interpret și scriitor român. A fost discipol al filozofului Constantin Noica. A absolvit Facultatea de Filozofie a Universităţii din Bucureşti în 1965 și a Facultății de Limbi Clasice a aceeași Universităţii în anul 1973. În prezent este profesor dr. în cadrul Facultăţii de Litere a Universităţii din Bucureşti. A realizat împreună cu Andrei Pleșu emisiuni culturale de televiziune (<em>Altfel</em>, la Realitatea TV și <em>50 de minute cu Pleșu și Liiceanu</em> la TVR1). În 1990 Liiceanu devine director al Editurii Humanitas, iar din 1992 este profesor la Facultatea de Filozofie a Universității din București. Prin ideile valorizate și comentate cu precădere în operă, tematica gândirii sale poate fi definită ca existențialistă și agnostică.</p>
+  <hr class="my-4">
+
+  <h1 class="display-5">Opere literare</h1>
+    <p class="lead"><strong>Amintim unele din cele mai cunoscute opere ale scriitorului: </strong>
+    </p>
+
+  <ul><p class="lead"><strong>Eseuri filozofice:</strong></p>
+    <li> Tragicul. O fenomenologie a limitei și depășirii, Univers, București, 1993 </li>
+    <li> Apel către lichele, București, Humanitas, 1992 </li>
+    <li> Despre limită, București, Humanitas, 1994 </li>
+    <li> Declarație de iubire, Humanitas, 2001 </li>
+    <li> 18 cuvinte-cheie ale lui Martin Heidegger, Humanitas, 2012 </li>
+    <li> Despre minciună, Humanitas, 2006 </li>
+    <li> Despre ură, Humanitas, 2007 </li>
+    <li> Despre seducție, Humanitas, 2007 </li>
+    <li> Dialoguri de duminică. O introducere în categoriile vieții, în colaborare cu  <a href="{% url 'writers:plesu' %}">Andrei Pleșu</a>, Humanitas, 2015 </li>
+    <li> Nebunia de a gândi cu mintea ta, Humanitas, 2016 </li>
+    <li> Isus al meu, Humanitas, 2020 </li>
+  </ul>
+
+
+  <ul><p class="lead"><strong>Jurnale:</strong></p>
+    <li> Jurnalul de la Păltiniș, București, Cartea Românească, 1983 </li>
+  </ul>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Interviuri</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/euLR5qRHv4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lUvSD2LWhqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fss2yFPWdXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Citate</h1>
+  <ul>
+    <li> “Inteligența începe, desigur, de la un anumit grad de suspiciune în privința prostiei proprii. Se împlinește, totuși, cu un anumit grad de luciditate în privința prostiei celorlalți.” - Întâlnire cu un necunoscut </li>
+    <li> “Scriind, nu fac decât să-i ajut pe ceilalți să afle cât de nefericiți ar trebui să fie, dacă ar afla cât de nefericiți sunt. Această conștiință a nefericirii este pecetea nobleței noastre de muritori.” - Întâlnire cu un necunoscut </li>
+    <li> “A pune ordine în conceptele fundamentale ale vieţii nu este o chestiune de pedanterie, ci un mod de-a face periodic curat în ograda minţii şi a vieţii tale.” - Despre ură </li>
+    <li> “Orgoliul înseamnă a avea demnitatea ce rezultă din conştiinţa propriei valori, vanitatea este dorinţa deşartă după mărire, după ieşitul în faţă, şi asta mână în mână cu nevoia de linguşeală.” - Întâlnire cu un necunoscut </li>
+    <li> “Credinţa nu-şi poate face intrarea în lume purtată pe braţele uscate ale abstracţiei.” - Isus al meu </li>
+    <li> “Altfel spus, un om nu este celebru pentru ceea ce a făcut, ci pentru ceea ce se spune despre ce a făcut.” - Scrisori către fiul meu</li>
+    <li> “Câte ocazii ale vieţii nu pierdem din cauza acestei necultivate încrederi în noi! Şi din cauza asta viaţa devine o pradă a celor care, dotaţi doar cu tupeu, fac prost în locul nostru ceea ce noi ştim că putem face bine.” - Scrisori către fiul meu </li>
+    <li> “Pe toţi oamenii care mi-au fost aproape i-am privit cu ochiul neîndurător al iubirii mele pentru ei.” - Declarație de iubire </li>
+  </ul>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Comandă cărțiile scriitorului: </h1>
+  <div class="row">
+    <div class="col-md-4 col-xs-12">
+      <a href="https://humanitas.ro/autori/gabriel-liiceanu">
+        <img src="{% static 'writers/humanitas.jpg' %}" alt="Humanitas" class='img-comanda'>
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <a href="https://carturesti.ro/autor/gabriel_liiceanu">
+        <img src="{% static 'writers/carturesti.jpg' %}" alt="Cărturești" class='img-comanda'>
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <a href="https://www.elefant.ro/list/carti/filters/autor-Gabriel%2BLiiceanu">
+        <img src="{% static 'writers/elefant.png' %}" alt="Elefant" class='img-comanda'>
+      </a>
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock content %}

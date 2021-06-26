@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block title %}Lucian Boia{% endblock title %}
+
+{% block content %}
+
+<h1 class="part-writer">Lucian Boia</h1> &nbsp;
+<div class="image-container">
+  <img src="{% static 'writers/rsz_boia.jpg' %}" alt="Lucian Boia" class="detail-photo">
+</div>
+
+<br><br>
+
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-5">Despre</h1>
+  <p class="lead"> <strong>LUCIAN BOIA</strong> s-a născut pe 1 februarie 1944, în Bucureşti. Este un scriitor și istoric român. A absolvit Facultatea de Istorie a Universității din București în anul 1965. În februarie 1977 a devenit lector al Facultății de Istorie din București. Din 1970 și până în 1989 a ocupat diverse funcții în biroul organizației de bază de partid. În perioada 1980-1990 a fost secretar general și vicepreședinte al Comisiei Internaționale de Istorie a Istoriografiei. Este specialist în istoria modernă. Lucian Boia publică atât în română, cât și în franceză. Principalele sale preocupări privesc mișcarea națională românească din Transilvania în perioada dualismului, precum și mișcarea națională cehă și slovacă, relațiile româno-ceho-slovace. Preocupat îndeosebi de istoria ideilor şi a imaginarului, s-a remarcat atât prin lucrări teoretice privitoare la istorie și la imaginar, cât şi prin investigarea consecventă a unei largi game de mitologii (de la viaţa extraterestră şi sfârşitul lumii până la comunism, naţionalism şi democraţie). Momentan este profesor la Facultatea de Istorie a Universităţii din Bucureşti. </p>
+  <hr class="my-4">
+
+  <h1 class="display-5">Opere literare</h1>
+    <p class="lead"><strong>Amintim unele din cele mai cunoscute opere ale scriitorului: </strong>
+    </p>
+
+  <ul><p class="lead"><strong>Eseuri:</strong></p>
+    <li> Evoluția istoriografiei române, UB, București, 1976 </li>
+    <li> Mituri istorice românești, UB, București, 1995 </li>
+    <li> Miturile comunismului românesc, UB, București, 1995 </li>
+    <li> Istorie și mit în conștiința românească, Humanitas, București, 1997 </li>
+    <li> Jocul cu trecutul. Istoria între adevăr și ficțiune, Humanitas, București, 1998 </li>
+    <li> Două secole de mitologie națională, Humanitas, București, 1999 </li>
+    <li> Mitologia științifică a comunismului, Humanitas, București, 1999 </li>
+    <li> România, țară de frontieră a Europei, Humanitas, București, 2002 </li>
+    <li> Mitul democrației, Humanitas, București, 2003 </li>
+    <li> Occidentul. O interpretare istorică, Humanitas, București, 2007 </li>
+    <li> Capcanele istoriei. Elita intelectuală românească între 1930 și 1950, Humanitas, București, 2011 </li>
+    <li> Suveranii României. Monarhia, o soluție?, Humanitas, București, 2014 </li>
+    <li> Cum am trecut prin comunism. Al doilea sfert de veac, Humanitas, București, 2019 </li>
+  </ul>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Interviuri</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WcWSW-fsrD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ox9nahsKGms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3GNW76G_fwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Citate</h1>
+  <ul>
+    <li> “Ceva nu merge în România, şi nu doar sus, în clasa politică, şi nu doar de ieri, de alaltăieri. Să fie un blestem? Nu, e doar istorie. Dar poate că înseamnă acelaşi lucru.” -  De ce este România altfel? </li>
+    <li> “La o mie de persoane care citesc o carte, zece până la o sută de mii vor citi un ziar, iar unul până la zece milioane vor privi la televizor. Un Voltaire al anului 2000 ar trebui să apară la televiziune, altminteri n-ar mai fi Voltaire.” - Mitul democraţiei</li>
+    <li> “România s-a construit cu multă mitologie. Eu demontez miturile, pentru că asta e meseria mea. Ca istoric, simt că este nevoie să spun ceea ce cred.” - Interviu </li>
+    <li> “Nimic nu e mai real, mai durabil, mai determinant decât imaginarul, vis colectiv al umanităţii.” </li>
+    <li> “România e o ţară imprevizibilă. Occidentul a încercat să construiască o lume raţională, organizată, previzibilă, iar românul nu-şi prea găseşte locul într-o asemenea lume.”  </li>
+    <li> “Trecutul înseamnă legitimare şi justificare. Fără trecut nu mai putem fi siguri de nimic.”</li>
+    <li> “Miturile naţionale au creat naţiunile moderne, dar au dus şi la cumplitele războaie dintre naţiuni.” - Două secole de mitologie națională </li>
+  </ul>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Comandă cărțiile scriitorului: </h1>
+  <div class="row">
+    <div class="col-md-4 col-xs-12">
+      <a href="https://humanitas.ro/autori/lucian-boia">
+        <img src="{% static 'writers/humanitas.jpg' %}" alt="Humanitas" class='img-comanda'>
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <a href="https://www.elefant.ro/list/carti/filters/autor-Lucian%2BBoia">
+        <img src="{% static 'writers/elefant.png' %}" alt="Elefant" class='img-comanda'>
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <a href="https://carturesti.ro/autor/lucian_boia">
+        <img src="{% static 'writers/carturesti.jpg' %}" alt="Cărturești" class='img-comanda'>
+      </a>
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock content %}

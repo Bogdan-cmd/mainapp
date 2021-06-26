@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <h3 class="post-form-h3">Creează o postare nouă mai jos despre scriitorul tău favorit, cartea ta preferată, domeniile de activitate ale artiștilor. </h3>
+  <br>
+
+  <form id="postForm" action="{% url 'posts:create' %}" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+
+    <input type="submit" class="btn btn-info btn-large" value="Postează">
+
+    <hr class="my-4">
+
+
+    <h3 class="post-form-h3">Apasă pe butoanele de jos pentru mai multe detalii</h3>
+
+    <p>
+      <a class="btn btn-outline-info" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Despre mesaj</a>
+      <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Despre alegerea grupului</button>
+    </p>
+    <div class="row">
+      <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="card card-body">
+            Subiectul mesajului tău este important pentru ceilalți utilizatori ai site-ului. Asigură-te că ești cât mai succint în prezentarea ideilor și folosești un limbaj adecvat.
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+          <div class="card card-body">
+            Pentru a posta un mesaj pe grup, trebuie să selectezi grupul dorit. În caz că nu există un grupul pe care îl cauți, poți să creezi unul nou accesând secțiunea <a href="{% url 'groups:create' %}"><b>Creează un grup nou</b></a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+{% endblock %}

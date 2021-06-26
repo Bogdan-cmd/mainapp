@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block content %}
+
+<h1 class="display-3">SCRIITORI PREZENTAȚI </h1> <br><hr class="my-4"></br>
+
+  <h3>Mai jos sunt prezentați puțini din scriitorii ce au influențat realizatorul site-ului de-a lungul timpului.</h3> <br></br>
+
+  <br>
+  <div class="row">
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+        <a href="{% url 'writers:cartarescu' %}">
+          <img class="img-writers" src="{% static 'writers/rsz_1cartarescu.jpg' %}"  alt="Mircea Cărtărescu" style="padding-right:80px; padding-left:46px;">
+        </a>
+          <div class="w-container">
+            <p>Mircea Cărtărescu</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+        <a href="{% url 'writers:vancu' %}">
+         <img class="img-writers" src="{% static 'writers/rsz_1vancu.jpg' %}" alt="Radu Vancu" style="padding-right:80px; padding-left:46px">
+        </a>
+          <div class="w-container">
+            <p>Radu Vancu</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+       <a href="{% url 'writers:carstean' %}">
+        <img class="img-writers" src="{% static 'writers/carstean.jpg' %}" alt="Svetlana Cârstean" style="width:338px; height:438px; padding-left:46px;">
+      </a>
+          <div class="w-container">
+            <p>Svetlana Cârstean</p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+      <a href="{% url 'writers:plesu' %}">
+        <img class="img-writers" src="{% static 'writers/rsz_plesu.jpg' %}" alt="Andrei Pleșu" style="padding-right:80px; padding-left:46px;">
+      </a>
+          <div class="w-container">
+            <p>Andrei Pleșu</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+       <a href="{% url 'writers:liiceanu' %}">
+        <img class="img-writers" src="{% static 'writers/rsz_liiceanu.jpg' %}" alt="Gabriel Liiceanu" style="padding-right:80px; padding-left:46px">
+      </a>
+          <div class="w-container">
+            <p>Gabriel Liiceanu</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+      <a href="{% url 'writers:sociu' %}">
+        <img class="img-writers" src="{% static 'writers/sociu.jpg' %}" alt="Dan Sociu" style="width:338px; height:438px; padding-left:46px;">
+      </a>
+          <div class="w-container">
+            <p>Dan Sociu</p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+      <a href="{% url 'writers:coman' %}">
+        <img class="img-writers" src="{% static 'writers/coman.jpg' %}" alt="Dan Coman" style="width:415px; height:438px; padding-right:80px; padding-left:46px;">
+      </a>
+          <div class="w-container">
+            <p>Dan Coman</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+       <a href="{% url 'writers:patapievici' %}">
+        <img class="img-writers" src="{% static 'writers/rsz_patapievici.jpg' %}" alt="Horia-Roman Patapievici" style="padding-right:80px; padding-left:46px">
+      </a>
+          <div class="w-container">
+            <p>Horia-Roman Patapievici</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+      <a href="{% url 'writers:perta' %}">
+        <img class="img-writers" src="{% static 'writers/perta.jpg' %}" alt="Cosmin Perța" style="width:338px; height:438px; padding-left:46px;">
+      </a>
+          <div class="w-container">
+            <p>Cosmin Perța</p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+       <a href="{% url 'writers:komartin' %}">
+        <img class="img-writers" src="{% static 'writers/komartin.jpg' %}" alt="Claudiu Komartin" style="width:415px; height:438px; padding-right:80px; padding-left:46px;">
+       </a>
+          <div class="w-container">
+            <p>Claudiu Komartin</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+       <a href="{% url 'writers:boia' %}">
+        <img class="img-writers" src="{% static 'writers/rsz_boia.jpg' %}" alt="Lucian Boia" style="padding-right:80px; padding-left:46px">
+       </a>
+          <div class="w-container">
+            <p>Lucian Boia</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <div class="polaroid">
+       <a href="{% url 'writers:paraschivescu' %}">
+        <img class="img-writers" src="{% static 'writers/paraschivescu.jpg' %}" alt="Radu Paraschivescu" style="width:338px; height:438px; padding-left:46px;">
+       </a>
+          <div class="w-container">
+            <p>Radu Paraschivescu</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center">
+    <div class="footer-container">2021 Copyright: @Istrate Bogdan
+    </div>
+  </footer>
+
+{% endblock content %}

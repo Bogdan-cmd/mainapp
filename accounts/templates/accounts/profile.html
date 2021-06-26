@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+  <div class="media">
+    <div class="media-left">
+      <img class="media-object" src="{{ user.profile.image.url }}" alt="Default Image" style="width:200px; height:200px;">
+    </div>
+      <div class="media-body">
+        <h1>{{ user.username }}</h1>
+        <h3>{{ user.email }}</h3>
+      </div>
+
+   <form method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+    <fieldset class="form-group">
+     <div class="container">
+      <h2>INFORMAȚII PROFIL PERSONAL</h2>
+        {{ user_form|crispy }}
+        {{ profile_form|crispy }}
+     </div>
+   </fieldset>
+    <div class="container">
+      <button type="submit" class="btn btn-primary">Update</button>
+      <a href="{% url 'accounts:password-change-view' %}">
+        <button type="button" class="btn btn-secondary" name="button">Schimbă parola</button>
+      </a>
+
+      <a href="{% url 'accounts:delete-account' request.user.pk %}">
+        <button type="button" class="btn btn-danger" name="button">Șterge contul</button>
+      </a>
+
+
+    </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

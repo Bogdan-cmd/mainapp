@@ -1,0 +1,317 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+      <h1 class="index1">Bun venit, {{ user.username }}!</h1>
+      <hr class="my-4">
+      <div class="container">
+        <div class="first-p">
+          <h2 class="display-5">DESPRE</h2>
+            <h5 class="index2">Pagina aceasta este destinată promovării scriitorilor români. Scriitorii români contemporani tratează publicul cu doze puternice de literatură. Aceștia au talentul de a extrage din cotidian cele mai ordinare întâmplări și să le transforme în adevărate fire narative. Rolul scriitorilor este de a introduce un cititor neinițiat într-o călătorie complexă, care-l ajută să se regăsească, să înțeleagă, să-și pună întrebări, să se revolte sau să accepte. Literatura românească este bine văzută în ochii criticilor. Ei apreciază în special originalitatea ideilor și a structurilor bine închegate a textelor, inovația, tratarea subiectivă și ironică alcătuită din imagini ample ale societății contemporane, precum și rememorări și transpuneri în secolul trecut, cu evidențieri pe scară largă a politicii, esența bazându-se pe cum acele vremuri afectau sufletul omului. Este evident că se încearcă și se reușește o trecere a granițelor în ceea ce privește stilurile abordate. Scriitorii români revoluționează cu fiecare carte tipărită și lansată literatura românească, tocmai pentru a oferi publicului experiențe noi, intrinseci, spontane, ce ies din zona de confort. </h5>
+        </div>
+      </div>
+
+        <br><br>
+        <hr class="my-4"> <br><br>
+        <div class="second-p">
+          <h2 class="display-5">O PRIVIRE ASUPRA CÂTORVA SCRIITORI PREZENTAȚI</h2>
+
+          <div class="row">
+          <div class="column-md-4 col-xs-12">
+           <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front">
+                <img src="{% static 'writers/rsz_1cartarescu.jpg' %}" alt="Mircea Cărtărescu">
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  "Opera artistului e cochilia sa, dar pe mine mă interesează animalul care-a secretat-o din sângele și din carnea lui."
+                  <span>- MIRCEA CĂRTĂRESCU -</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column-md-4 col-xs-12">
+         <div class="flip-card-container">
+          <div class="flip-card">
+            <div class="flip-card-front">
+              <img src="{% static 'writers/rsz_1vancu.jpg' %}" alt="Radu Vancu">
+            </div>
+            <div class="flip-card-back">
+              <p>
+                "În artă frumusețea canibalează adevărul. Dacă un obiect e frumos, adevărul lui devine secundar - ba chiar nimeni nu-l mai chestionează."
+                <span>- RADU VANCU -</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column-md-4 col-xs-12">
+       <div class="flip-card-container">
+        <div class="flip-card">
+          <div class="flip-card-front">
+            <img src="{% static 'writers/rsz_liiceanu.jpg' %}"  alt="Gabriel Liiceanu">
+          </div>
+          <div class="flip-card-back">
+            <p>
+              "Scriind, nu fac decât să-i ajut pe ceilalți să afle cât de nefericiți ar trebui să fie, dacă ar afla cât de nefericiți sunt. Această conștiință a nefericirii este pecetea nobleței noastre de muritori."
+              <span>- GABRIEL LIICEANU -</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
+  <br><br>
+  <hr class="my-4"> <br><br>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <h2 class="display-5">FUNCȚIONALITĂȚI ALE SITE-ULUI</h2>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'writers/scrie.jpg' %}" class="d-block w-100" alt="Scriitor">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="heading-c1">Scriitori</h5>
+        <p class="paragraph-c1">Vezi și află mai mult despre scriitorii români contemporani prezentați pe site.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'writers/postare.jpg' %}" class="d-block w-100" alt="Postare">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="heading-c2">Postează & înscrie-te într-un grup</h5>
+        <p class="paragraph-c2">Ai posibilitatea de a te înscrie într-un grup și de a posta subiecte legate de scriitorii tăi favoriți, discutând cu ceilalți utilizatori.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'writers/polls.png' %}" class="d-block w-100" alt="Polls">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="heading-c3">Polls</h5>
+        <p class="paragraph-c3">Creează și răspunde la poll-uri legate de scriitorii și cărțile tale preferate.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+    <br><br>
+    <hr class="my-4">
+    <br><br>
+
+    <div class="container">
+      <div class="fourth-p">
+        <h2 class="display-5">CREAȚII PROPRII</h2> <br><br>
+          <ul class="list-unstyled">
+           <li class="media">
+             <img class="mr-3" src="{% static 'writers/posting.jpg' %}" alt="Postează">
+             <div class="media-body">
+               <h4 class="mt-0 mb-1"> <strong>POSTEAZĂ</strong> </h4>
+               Poți să postezi pe site creațiile tale proprii foarte simplu, accesând secțiunea <a href="{% url 'blog:main' %}">aceasta</a>. Ai posibilitatea să vezi postările și celorlalți utilizatori.
+             </div>
+           </li>
+           <br>
+           <li class="media">
+             <img class="mr-3" src="{% static 'writers/edit.png' %}" alt="Editeaz">
+             <div class="media-body">
+               <h4 class="mt-0 mb-1"><strong>EDITEAZĂ</strong></h4>
+               Ai posibilitatea ca după ce postezi o operă proprie să o editezi în caz că descoperi greșeli sau în caz că vrei să mai adaugi conținut. Poți, de asemenea, să îți ștergi și postarea de pe site.
+             </div>
+           </li>
+           <br>
+           <li class="media">
+             <img class="mr-3" src="{% static 'writers/like.jpg' %}" alt="Like/Unlike">
+             <div class="media-body">
+               <h5 class="mt-0 mb-1"><strong>LIKE/UNLIKE</strong></h5>
+               Ai posiblitatea de a aprecia o postare dacă aceasta ți-a plăcut, însă poți să anulezi acțiunea ta în caz că te rezgânești.
+             </div>
+           </li>
+         </ul>
+      </div>
+    </div>
+
+    <br><br>
+    <hr class="my-4">
+
+  {% else %}
+
+      <h1 class="index3">Bun venit! </h1>
+      <hr class="my-4">
+      <h2 class="index4">Înregistrează-te sau loghează-te mai jos pentru a descoperi toate funcționalitățile site-ului: <br>
+        <button type="submit" class="btn btn-outline-primary btn-lg">
+          <a href="{% url 'accounts:signup' %}">Înregistrează-te</a>
+        </button>
+        <br>
+        <button type="submit" class="btn btn-outline-info btn-lg">
+          <a href="{% url 'accounts:login' %}">Login</a>
+        </button>
+      </h2>
+
+      <br><br>
+      <hr class="my-4">
+
+      <div class="container">
+        <div class="first-p">
+          <h2 class="display-5">DESPRE</h2>
+            <h5 class="index2">Pagina aceasta este destinată promovării scriitorilor români. Scriitorii români contemporani tratează publicul cu doze puternice de literatură. Aceștia au talentul de a extrage din cotidian cele mai ordinare întâmplări și să le transforme în adevărate fire narative. Rolul scriitorilor este de a introduce un cititor neinițiat într-o călătorie complexă, care-l ajută să se regăsească, să înțeleagă, să-și pună întrebări, să se revolte sau să accepte. Literatura românească este bine văzută în ochii criticilor. Ei apreciază în special originalitatea ideilor și a structurilor bine închegate a textelor, inovația, tratarea subiectivă și ironică alcătuită din imagini ample ale societății contemporane, precum și rememorări și transpuneri în secolul trecut, cu evidențieri pe scară largă a politicii, esența bazându-se pe cum acele vremuri afectau sufletul omului. Este evident că se încearcă și se reușește o trecere a granițelor în ceea ce privește stilurile abordate. Scriitorii români revoluționează cu fiecare carte tipărită și lansată literatura românească, tocmai pentru a oferi publicului experiențe noi, intrinseci, spontane, ce ies din zona de confort. </h5>
+        </div>
+      </div>
+
+      <br><br>
+      <hr class="my-4"> <br><br>
+      <div class="second-p">
+        <h2 class="display-5">O PRIVIRE ASUPRA CÂTORVA SCRIITORI PREZENTAȚI</h2>
+
+        <div class="row">
+        <div class="column-md-4 col-xs-12">
+         <div class="flip-card-container">
+          <div class="flip-card">
+            <div class="flip-card-front">
+              <img src="{% static 'writers/rsz_1cartarescu.jpg' %}" alt="Mircea Cărtărescu">
+            </div>
+            <div class="flip-card-back">
+              <p>
+                "Opera artistului e cochilia sa, dar pe mine mă interesează animalul care-a secretat-o din sângele și din carnea lui."
+                <span>- MIRCEA CĂRTĂRESCU -</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column-md-4 col-xs-12">
+       <div class="flip-card-container">
+        <div class="flip-card">
+          <div class="flip-card-front">
+            <img src="{% static 'writers/rsz_1vancu.jpg' %}" alt="Radu Vancu">
+          </div>
+          <div class="flip-card-back">
+            <p>
+              "În artă frumusețea canibalează adevărul. Dacă un obiect e frumos, adevărul lui devine secundar - ba chiar nimeni nu-l mai chestionează."
+              <span>- RADU VANCU -</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="column-md-4 col-xs-12">
+     <div class="flip-card-container">
+      <div class="flip-card">
+        <div class="flip-card-front">
+          <img src="{% static 'writers/rsz_liiceanu.jpg' %}"  alt="Gabriel Liiceanu">
+        </div>
+        <div class="flip-card-back">
+          <p>
+            "Scriind, nu fac decât să-i ajut pe ceilalți să afle cât de nefericiți ar trebui să fie, dacă ar afla cât de nefericiți sunt. Această conștiință a nefericirii este pecetea nobleței noastre de muritori."
+            <span>- GABRIEL LIICEANU -</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+  <br><br>
+  <hr class="my-4"> <br><br>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <h2 class="display-5">FUNCȚIONALITĂȚI ALE SITE-ULUI</h2>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'writers/scrie.jpg' %}" class="d-block w-100" alt="Scriitor">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="heading-c1">Scriitori</h5>
+        <p class="paragraph-c1">Vezi și află mai mult despre scriitorii români contemporani prezentați pe site.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'writers/postare.jpg' %}" class="d-block w-100" alt="Postare">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="heading-c2">Postează & înscrie-te într-un grup</h5>
+        <p class="paragraph-c2">Ai posibilitatea de a te înscrie într-un grup și de a posta subiecte legate de scriitorii tăi favoriți, discutând cu ceilalți utilizatori.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'writers/polls.png' %}" class="d-block w-100" alt="Polls">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="heading-c3">Polls</h5>
+        <p class="paragraph-c3">Creează și răspunde la poll-uri legate de scriitorii și cărțile tale preferate.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<br><br>
+<hr class="my-4"> <br><br>
+
+<div class="container">
+  <div class="fourth-p">
+    <h2 class="display-5">CREAȚII PROPRII</h2> <br><br>
+      <ul class="list-unstyled">
+       <li class="media">
+         <img class="mr-3" src="{% static 'writers/posting.jpg' %}" alt="Postează">
+         <div class="media-body">
+           <h4 class="mt-0 mb-1"> <strong>POSTEAZĂ</strong> </h4>
+           Poți să postezi pe site creațiile tale proprii foarte simplu, accesând secțiunea <a href="{% url 'blog:main' %}">aceasta</a>. Ai posibilitatea să vezi postările și celorlalți utilizatori.
+         </div>
+       </li>
+       <br>
+       <li class="media">
+         <img class="mr-3" src="{% static 'writers/edit.png' %}" alt="Editeaz">
+         <div class="media-body">
+           <h4 class="mt-0 mb-1"><strong>EDITEAZĂ</strong></h4>
+           Ai posibilitatea ca după ce postezi o operă proprie să o editezi în caz că descoperi greșeli sau în caz că vrei să mai adaugi conținut. Poți, de asemenea, să îți ștergi și postarea de pe site.
+         </div>
+       </li>
+       <br>
+       <li class="media">
+         <img class="mr-3" src="{% static 'writers/like.jpg' %}" alt="Like/Unlike">
+         <div class="media-body">
+           <h5 class="mt-0 mb-1"><strong>LIKE/UNLIKE</strong></h5>
+           Ai posiblitatea de a aprecia o postare dacă aceasta ți-a plăcut, însă poți să anulezi acțiunea ta în caz că te rezgânești.
+         </div>
+       </li>
+     </ul>
+  </div>
+</div>
+
+<br><br>
+<hr class="my-4">
+  {% endif %}
+
+
+{% endblock %}

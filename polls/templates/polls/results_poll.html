@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% block title %}Results{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Rezultatele pollului</h2>
+            </div>
+
+            <br><br>
+
+            <div class="panel-body">
+                <h3>{{ poll.question }}</h3>
+            </div>
+
+            <br>
+            <ul class="list-group">
+                <li class="list-group-item" >{{ poll.option_one }} &mdash; <strong>{{ poll.option_one_count }}</strong></li>
+                <li class="list-group-item" >{{ poll.option_two }} &mdash; <strong>{{ poll.option_two_count }}</strong></li>
+                <li class="list-group-item" >{{ poll.option_three }} &mdash; <strong>{{ poll.option_three_count }}</strong></li>
+                <li class="list-group-item" >{{ poll.option_four }} &mdash; <strong>{{ poll.option_four_count }}</strong></li>
+            </ul>
+
+            <br>
+            <div class="panel-footer">
+                TOTAL &mdash; <strong>{{ poll.total }}</strong>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

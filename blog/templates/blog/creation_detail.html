@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+  <article class="media content-section">
+    <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+    <div class="media-body">
+      <div class="article-metadata">
+        <h3><strong> {{ object.author }} </strong></h3>
+        <h5 class="text-muted">{{ object.date_posted|date:"F d, Y" }}</h5>
+        {% if object.author == user %}
+          <div>
+            <a class="btn btn-info" href="{% url 'blog:update' object.id %}">Update</a>
+            <a class="btn btn-danger" href="{% url 'blog:delete' object.id %}">Delete</a>
+          </div>
+        {% endif %}
+      </div>
+      <h2 class="article-title">{{ object.title }}</h2>
+      <p class="article-content">{{ object.content }}</p>
+      <br>
+      <a href="{% url 'blog:main' %}" class="btn btn-outline-info">Înapoi la creații</a>
+      <br><br><br>
+      <form action="{% url 'blog:like_creation' creation.pk %}"  method="POST">
+        {% csrf_token %}
+      {% if user.is_authenticated %}
+        {% if liked %}
+          <button type="submit" name="creation_id" value="{{ creation.id }}" class="btn btn-danger">Unlike</button>
+          - {{ total_likes }} Likes
+        {% else %}
+        <button type="submit" name="creation_id" value="{{ creation.id }}" class="btn btn-primary">Like</button>
+        - {{ total_likes }} Likes
+        {% endif %}
+
+      {% else %}
+        <small> <a href="{% url 'accounts:login' %}">Loghează-te</a> pentru a putea aprecia această postare. </small>
+
+      {% endif %}
+      <br>
+        
+      </form>
+    </div>
+
+
+
+  </article>
+{% endblock content %}

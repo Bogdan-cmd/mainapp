@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<div class="container">
+  <h1>Înregistrează-te acum!</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+     <!-- <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"></div> -->
+    <input type="submit" class="btn btn-primary" value="Înregistrează-te!">
+  </form>
+
+</div>
+
+{% endblock  %}

@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block title %}Dan Sociu{% endblock title %}
+
+{% block content %}
+
+<h1 class="part-writer">Dan Sociu</h1> &nbsp;
+<div class="image-container">
+  <img src="{% static 'writers/sociu.jpg' %}" alt="Dan Sociu" class="detail-photo">
+</div>
+
+<br><br>
+
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-5">Despre</h1>
+  <p class="lead"> <strong>DAN SOCIU</strong> s-a născut pe 20 mai 1978, în Botoșani. A absolvit Universitatea Alexandru Ioan Cuza din Iași. Este un scriitor român contemporan. I se decernează Premiul Național pentru Poezie Mihai Eminescu  pentru volumul de debut de poezie <em>borcane bine legate, bani pentru încă o săptămână</em>. În 2006, <em>revista 22</em> îl desemnează ca fiind cel mai tânăr poet al momentului. </p>
+  <hr class="my-4">
+
+  <h1 class="display-5">Opere literare</h1>
+    <p class="lead"><strong>Amintim unele din cele mai cunoscute opere ale scriitorului: </strong>
+    </p>
+
+  <ul><p class="lead"><strong>Poezie:</strong></p>
+    <li> borcane bine legate, bani pentru încă o săptămână, Junimea, București, 2002 - Premiul Național pentru Poezie Mihai Eminescu </li>
+    <li> cîntece eXcesive, Cartea Românească, București, 2005 - Premiul pentru Poezie al Uniunii Scriitorilor din Romania </li>
+    <li> Poezii naive și sentimentale, Cartea Românească, București, 2012  </li>
+    <li> Vino cu mine știu exact unde mergem - Antologie 1990-2014, Polirom, București, 2015 - Volum pentru care scriitorul refuză premiul Cartea de Poezie a anului 2013</li>
+  </ul>
+
+  <ul><p class="lead"><strong>Proză:</strong></p>
+    <li> URBANCOLIA, Polirom, București, 2008 </li>
+    <li> Nevoi speciale, Polirom, București, 2008  </li>
+  </ul>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Interviuri</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/L6AeI9gg9qU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9r2wT8-EKTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gh2oP8SviHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Poezii ale scriitorului</h1>
+  <li> <em><b>Capu-n mâini</em></b> <br><br>
+    mi-am luat și eu capu-n mâini și nu și-a făcut efectul <br>
+    în lume se văruia <br>
+    și tot ce era pat sau canapea <br>
+    fusese acoperit cu ziare <br>
+    nu era loc să te-ntinzi <br>
+    loc să-ți culci capul terciuit de experimente <br>
+    <br> <br>
+    îmi inventasem o țeastă ca nu <br>
+    cumva creierul meu să <br>
+    se-atingă cu mizeria de-afară <br>
+    ca nu cumva degete <br>
+    murdare să-ndrăznească a-l mângâia <br>
+    ca pe un creier al lor <br>
+    <br><br>
+    și creierul meu se interiorizare <br>
+    și suferea <br>
+    uneori simt că mi-a murit cineva în cap <br>
+    mă iau atunci în brațe și veghez <br>
+    și după trei zile <br>
+    scuip afară un trupușor înghețat <br>
+    <br><br>
+    un făt micuț <br>
+    cu ochi albaștri <br>
+    senini <br>
+    <br><br>
+    un omuleț cu capul în mâini <br>
+  </li>
+  <br><br>
+
+  <li> <em><b>Nici măcar un haiku</em></b> <br><br>
+    am 25 de ani și sunt terminat <br>
+    iliescu are 75 <br>
+    și zâmbește <br>
+  </li>
+</ul>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Comandă cărțiile scriitorului: </h1>
+  <div class="row">
+    <div class="col-md-4 col-xs-12">
+      <a href="https://carturesti.ro/autor/dan_sociu">
+        <img src="{% static 'writers/carturesti.jpg' %}" alt="Cărturești" class='img-comanda'>
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <a href="https://www.polirom.ro/carti/-/carte/5611">
+        <img src="{% static 'writers/polirom.png' %}" alt="Polirom" class='img-comanda'>
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <a href="https://www.cartepedia.ro/autor/dan-sociu-3313">
+        <img src="{% static 'writers/cartepedia.jpg' %}" alt="Cartepedia" class='img-comanda'>
+      </a>
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock content %}

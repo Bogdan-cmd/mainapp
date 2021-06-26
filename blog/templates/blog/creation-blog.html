@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+  <div class="container">
+    <h2>Secțiunea aceasta este dedicată pentru toți utilizatorii ce vor să-și posteze creațiile proprii pe platformă.</h2>
+    <a href="{% url 'blog:create' %}">
+      <input class="btn btn-outline-warning btn-large" value="Adaugă creația ta proprie aici!" type="submit">
+    </a>
+  </div>
+
+  <br>
+  <hr>
+    {% for creation in creations %}
+        <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ creation.author.profile.image.url }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <h5 class="mr-2">{{ creation.author }}</h5>
+              <small class="text-muted">{{ creation.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'blog:detail' creation.id %}">{{ creation.title }}</a></h2>
+            <p class="article-content">{{ creation.content }}</p>
+          </div>
+        </article>
+        <br><br>
+        <hr class="display my-4">
+        <br>
+    {% endfor %}
+{% endblock content %}

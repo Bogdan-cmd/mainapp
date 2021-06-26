@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Șterge contul</legend>
+            <p>Ești sigur că vrei să îți ștergi contul? Acțiunea aceasta va rezulta în ștergerea permanentă a contului și a conținutului pe care l-ai generat.
+            </p>
+            {{ form|crispy }}
+    </fieldset>
+    <div class="form-group">
+        <button class="btn btn-danger" type="submit">Șterge contul</button>
+            <button class="btn btn-warning" type="submit">
+               <a href="{% url 'profile' %}">Înapoi</a>
+            </button>
+    </div>
+</form>
+
+{% endblock content %}

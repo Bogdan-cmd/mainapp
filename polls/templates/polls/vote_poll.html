@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Vote{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Votează opțiunea preferată: </h3>
+            </div>
+
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>{{ poll.question }}</h3>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <div class="radio">
+                                    <label class="poll-option1">
+                                        <input type="radio" name="poll" value="option1" required>
+                                        {{ poll.option_one }}
+                                    </label> &nbsp; <br></br>
+                                    <label class="poll-option2">
+                                        <input type="radio" name="poll" value="option2">
+                                        {{ poll.option_two }}
+                                    </label> &nbsp; <br></br>
+                                    <label class="poll-option3">
+                                        <input type="radio" name="poll" value="option3">
+                                        {{ poll.option_three }}
+                                    </label> &nbsp; <br></br>
+                                    <label class="poll-option4">
+                                        <input type="radio" name="poll" value="option4">
+                                        {{ poll.option_four }}
+                                    </label> &nbsp;
+                                </div>
+
+                            </div>
+                            <hr />
+
+                            <button type="submit" class="btn btn-info poll-btn">
+                                Trimite
+                            </button>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

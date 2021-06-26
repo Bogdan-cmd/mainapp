@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load bootstrap4%}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="form-group">
+  <h1>Login</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-primary" value="Login">
+    <small class="text-muted">
+      <a href="{% url 'password_reset' %}"><b>Ai uitat parola?</b></a>
+    </small>
+    <hr>
+
+    <h5>Nou pe site? Creează un cont <a href="{% url 'accounts:signup' %}">AICI</a>.</h5>
+  </form>
+
+</div>
+
+{% endblock  %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h3>CREEAZĂ UN POLL <a href="{% url 'polls:create' %}">ÎN SECȚIUNEA ACEASTA</a>.</h3>
+</div>
+
+<br><br>
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">Polluri postate până acum: </h2>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+      <ul class="list-group">
+        {% for poll in polls %}
+          <li class="list-group-item">
+            <strong>{{ poll.question }}</strong>
+              <span class="pull-right">
+                <a href="{% url 'polls:vote' poll.id %}" class="btn btn-info btn-xs">Votează!</a> &nbsp;
+                <a href="{% url 'polls:results' poll.id %}" class="btn btn-success btn-xs">Vezi rezultatele!</a> &nbsp;
+              </span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "groups/group_base.html" %}
+{% block pregroup %}
+{% load bootstrap4 %}
+
+<div class="col-md-4">
+  <div class="content">
+  <!-- IN ESESNTA VREAU SA VERIFIC DACA USERUL ESTE LOGAT SI SA-I DAU UN MESAJ DE BUN VENIT -->
+    {% if user.is_authenticated %}
+      <h2>Bine ai revenit!
+        <!-- LINK INSPRE PROFILUL ACTUAL AL USERULUI LOGAT -->
+        <!-- for_user CONTINTE TOATE POSTURILE USERULUI -->
+        <a href="{% url 'posts:for_user' username=user.username %}">@{{user.username}}</a>
+         <!-- CU @ ARATA CA TWITTER -->
+      </h2>
+
+    {% endif %}
+
+    <h1>Grupuri valabile</h1>
+
+  </div>
+
+<!-- DACA USERUL E AUTENTIFICAT AR TREBUI SA AIPA LA DISPOZITIE UN BUTON PRIN CARE SA CREEZE UN GRUP NOU -->
+  {% if user.is_authenticated %}
+    <a href="{% url 'groups:create' %}" class="btn btn-md btn-warning">Creează un grup nou</a>
+  {% endif %}
+
+</div>
+
+{% endblock  %}
+
+
+{% block group_content %}
+<div class="col-md-8">
+  <div class="list-group">
+    {% for group in object_list  %} <!-- O LISTA A TUTUTOR GRUPURILOR PE CARE LE AVEM -->
+      <a class="list-group-item" href="{% url 'groups:single' slug=group.slug %}">
+        <h3 class="title list-group-item-heading">{{group.name}}</h3>
+        <div class="list-group-item-text container-fluid">
+          {{group.description_html|safe}} <!-- safe - DISPLAY CORECT PE PAGINA -->
+          <div class="row">
+            <div class="col-md-4">
+              <span class="badge">{{group.members.count}}</span>
+              membri
+            </div>
+            <div class="col-md-4">
+              <span class="badge">{{group.posts.count}}</span>
+              postări
+            </div>
+          </div>
+
+        </div>
+      </a>
+    {% endfor %}
+
+  </div>
+
+</div>
+
+{% endblock  %}

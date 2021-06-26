@@ -1,0 +1,60 @@
+{% extends "groups/group_base.html" %}
+{% load bootstrap4 %}
+<!-- BEFORE THE GROUP NAME -->
+
+{% block content %}
+
+<h1 class="group-name-h1">{{group.name}}</h1>  <!-- PRACTIC CVB UN CONTEXT DICTIONARY CE E PASAT CE ARE TOATE DETALIILE DESPRE UN MODEL -->
+                         <!-- group E VARIANTA LOWERCASE PENTRU MODELUL Group -->
+
+<h2>Număr de membri: {{group.members.count }}</h2>
+
+{% for user in group.members.all %}
+  <div class="row">
+    {% if user %}
+      <div class="col-md-6 col-xs-12 col-det">
+          <strong>{{ user.username }}</strong>
+      </div>
+    {% endif %}
+  </div>
+{% endfor %}
+
+  <br>
+
+<!-- DACA ESTI UN MEMBRU SI ESTI LOGAT VREAU SA AI UN BUTON DE LEAVE SAU JOIN BUTON PT GRUPUL RESPECTIV -->
+<div class="content">
+  {% if user in group.members.all %}
+
+    <a href="{% url 'groups:leave' slug=group.slug %}"
+       class="btn btn-warning btn-lg">Părăsește grupul!</a>
+
+  {% else %}
+
+  <a href="{% url 'groups:join' slug=group.slug %}"
+     class="btn btn-warning btn-lg">Înscrie-te în grup!</a>
+
+  {% endif %}
+
+<br><br><br>
+
+
+</div>
+
+<div class="container">
+  <h3 class="h3-detail">Vezi ce discută utilizatorii:</h3>
+  <hr>
+  {% if group.posts.count == 0 %} <!--DACA UN GRUP NU ARE NICIUN POST -->
+    <h2>Nu există nicio postare în acest grup!</h2>
+
+  {% else %}
+    {% for post in group.posts.all %}
+      {% include "posts/_post.html" %}
+      <!-- include -> se aseamana cu { extends "" %} -->
+      <!-- se insereaza continutul fix in mijlocul paginii HTML -->
+      <!-- DECI _post VA FI INJECTATA IN TOATE FILELE HTML CE CONTIN include -->
+    {% endfor %}
+
+  {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,321 @@
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0px;
+  overflow-y: scroll;
+  background-color: #FCF9FF;
+  color:black;
+  font-family: 'Roboto Slab', serif;
+}
+
+.mycontent{
+  padding-top: 50px;
+ /*margin-top: 100px;*/
+}
+
+.index1{
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Roboto Slab', serif;
+}
+
+.index2{
+    margin-left:10px;
+    border: 2px dashed #0D003E;
+    border-radius: 2px;
+    border-top: 5px;
+    border-left: 10px;
+}
+
+.display-3{
+  text-align: center;
+}
+
+.my-4{
+  border: 1px solid black;
+}
+
+.col-md-4 col-xs-12 {
+    float: left;
+    width: 33.33%;
+
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img-writers{
+    object-fit: cover;
+    float: left;
+    opacity: 1
+}
+
+.img-writers:hover{
+  opacity: 0.5;
+}
+
+
+div.polaroid{
+  width: 100%;
+  height: 475px;
+  display: inline-block;
+  /* margin: 55px 75px 30px; */
+  background-color: #e6f5f1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 50px;
+}
+
+div.w-container{
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 25px;
+}
+
+/*div.footer-copyright text-center{
+  color:black;
+  font-size: 3em;
+  font-weight: bold;
+}
+*/
+.fixed-bottom text-center{
+  background-color: black;
+}
+
+.footer-container{
+  font-size: 20px;
+  background-color:black;
+  color: white;
+}
+
+.part-writer{
+  text-align: center;
+  font-weight: bold;
+}
+
+.image-container{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+.jumbotron{
+  background-color: white;
+  float: left;
+}
+
+.lead{
+  margin-left: 5px;
+}
+
+.img-comanda{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  float: left;
+  border: 1px solid black;
+}
+
+.first-p{
+  background-color: white;
+  margin: 0;
+}
+
+.second-p{
+  background-color: white;
+  border: 2px dashed #0D003E;
+  border-bottom: 10px;
+  border-right: 10px;
+}
+
+.flip-card-container {
+  perspective: 1000px;
+  margin-left: 65px;
+}
+
+.flip-card {
+  position: relative;
+  width: 292px;
+  height: 438px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card {
+  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 0.5rem; */
+}
+
+.flip-card-front {
+  background-color: #333;
+  color: #fff;
+}
+
+.flip-card-back {
+  background-color: #B5A26E;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front img {
+  /*width: 100%;
+  height: 100%;*/
+  border-radius: 0.5rem;
+}
+
+.flip-card-back p {
+  margin: 1rem;
+  font-size: 1.4rem;
+  /*line-height: 1.5rem; */
+}
+
+.flip-card-back p span {
+  text-align: center;
+  display: block;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 1.25rem;
+}
+
+.d-block {
+  height: 420px;
+}
+
+.heading-c1{
+  font-weight: bold;
+}
+
+.paragraph-c1{
+  font-weight: bold;
+}
+
+.heading-c2{
+  color: #7E1414;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.paragraph-c2{
+  color: #7E1414;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+
+.heading-c3{
+  color: black;
+  font-weight: bold;
+}
+
+.paragraph-c3{
+  color: black;
+  font-weight: bold;
+}
+
+.display-5{
+  text-align: center;
+}
+
+#carouselExampleCaptions{
+  border: 2px dashed #0D003E;
+  border-top: 8px;
+}
+
+.carousel-control-prev-icon{
+  background-color: black;
+}
+
+.carousel-control-next-icon{
+  background-color: black;
+}
+
+.index3{
+  font-size: 3em;
+}
+
+.post-form-h3{
+  font-weight: bold;
+}
+
+.group-name-h1{
+  font-weight: bold;
+}
+
+.show-members{
+  font-size: 2em;
+}
+
+.col-det{
+  border-top: 2px solid gray;
+}
+
+.hr-posts{
+  border-top: 2px solid gray;
+}
+
+.h3-detail{
+  padding-left: 15px;
+}
+
+.mr-3{
+  width: 400px;
+  height: 300px;
+}
+
+.panel-title{
+  font-weight: bold;
+}
+
+.poll-question{
+  font-weight: bold;
+}
+
+.poll-option1{
+  font-weight: bold;
+}
+
+.poll-option2{
+  font-weight: bold;
+}
+
+.poll-option3{
+  font-weight: bold;
+}
+
+.poll-option4{
+  font-weight: bold;
+}
+
+.panel-footer{
+  font-weight: bold;
+}
+
+.poll-btn{
+  position: absolute;
+}
+
+.article-content{
+  margin-left: 30px;
+}
+
+.mr-2{
+  font-weight: bold;
+}

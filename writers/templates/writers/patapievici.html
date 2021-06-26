@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block title %}Horia-Roman Patapievici{% endblock title %}
+
+{% block content %}
+
+<h1 class="part-writer">Horia-Roman Patapievici</h1> &nbsp;
+<div class="image-container">
+  <img src="{% static 'writers/rsz_patapievici.jpg' %}" alt="Horia-Roman Patapievici" class="detail-photo">
+</div>
+
+<br><br>
+
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-5">Despre</h1>
+  <p class="lead"> <strong>HORIA-ROMAN PATAPIEVICI</strong> s-a născut pe 18 martie 1957, în Bucureşti. A absolvit Facultatea de Fizică a Universității din București, în 1981 și obține masteratul cu un studiu despre lasere. În prezent este profesor dr. în cadrul Facultăţii de Litere a Universităţii din Bucureşti. Este un scriitor, fizician, filosof și eseist român contemporan. Este membru al Uniunii Scriitorilor din România, membru fondator al Grupului de cercetare Fundamentele Modernității Europene și membru de onoare al Institutului Ludwig von Mises. Începând cu anul 2004, Patapievici este director al unei reviste culturale, <em>Idei în dialog</em>. În ianuarie 2005, este numit în funcția de șef al Institutul Cultural Român (ICR). În 17 martie 2012, Universitatea de Vest i-a oferit lui Horia-Roman Patapievici distincția de Doctor Honoris Causa. Printre premiile cele mai importante ale autorului, se disting următoarele: Premiul pentru debut al Uniunii Scriitorilor(1995),  Premiul pentru eseu din partea Uniunii Scriitorilor pentru <em>Omul recent</em>(2001),  Premiul pentru Literatura din partea revistei <em>Flacăra</em>(2012), Marele premiu al Profesioniștilor de Televiziune(2015). </p>
+  <hr class="my-4">
+
+  <h1 class="display-5">Opere literare</h1>
+    <p class="lead"><strong>Amintim unele din cele mai cunoscute opere ale scriitorului: </strong>
+    </p>
+
+  <ul><p class="lead"><strong>Eseuri:</strong></p>
+    <li> Cerul văzut prin lentilă, Nemira, București, 1995 </li>
+    <li> Politice, Humanitas, București, 1996 </li>
+    <li> Omul recent, Humanitas, București, 2001 </li>
+    <li> Ochii Beatricei sau cum arată cu adevărat lumea lui Dante, Humanitas, București, 2004 </li>
+    <li> Două eseuri despre paradis, Humanitas, București, 2018 </li>
+    <li> Anii urii, Humanitas, București, 2019 </li>
+  </ul>
+
+  <ul><p class="lead"><strong>Audiobook-uri:</strong></p>
+    <li> Spărtura din cer, Humanitas Multimedia, București, 2003 </li>
+    <li> Despre scris, ascultare și imaginație, Humanitas Multimedia, București, 2008 </li>
+  </ul>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Interviuri</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KXk-6qFkZTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pHyCTZyekA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XdyvZqvIvyY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Citate</h1>
+  <ul>
+    <li> “Am devenit pentru că am căutat. Dar dacă nu aş fi căutat, cel pe care îl căutam nu ar fi existat niciodată. Lucrurile există numai dacă te hotărăşti să le rosteşti. La fel făpturile, dacă accepţi să le iubeşti pentru carnea pe care o pun în calea luminii.” - Zbor în bătaia săgeţii </li>
+    <li> “Viaţa este periculoasă; noi ne jucăm sufletul în fiecare clipă.” - Interviu TVR1</li>
+    <li> “Nu mai puţin, după cum este o bună igienă sufletească să îţi pui viaţa în primejdie din când în când, este o bună igienă mentală să nu iei lucrurile prea în serios.” - Cerul văzut prin lentilă </li>
+    <li> “Tot ce nu obţii prin străduinţă abilă, inteligenţă, tărie de voinţă şi caracter este sau se va dovedi mai târziu un dar grecesc.” - Politice </li>
+    <li> “Tot ce nu mi s-a întâmplat, şi am iubit, mi se va întâmpla. Iar tot ce am iubit, se va reîntoarce mereu, fără răgaz, în mine.” - Zbor în bătaia săgeţii </li>
+    <li> “Liber eşti numai atunci când ai curajul să rosteşti adevărul.” - Politice </li>
+    <li> “A realiza forma poeziei înseamnă a te transforma în zeu.” - Zbor în bătaia săgeţii </li>
+    <li> “A fi civilizat înseamnă mai mult decât a fi modern: înseamnă să trăieşti în actualitatea valorilor superioare.” - Omul recent </li>
+  </ul>
+
+  <br></br>
+  <hr class="my-4">
+
+  <h1 class="display-5">Comandă cărțiile scriitorului: </h1>
+  <div class="row">
+    <div class="col-md-4 col-xs-12">
+      <a href="https://humanitas.ro/autori/horia-roman-patapievici">
+        <img src="{% static 'writers/humanitas.jpg' %}" alt="Humanitas" class='img-comanda'>
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <a href="https://www.elefant.ro/list/carti/filters/autor-Horia-Roman%2BPatapievici">
+        <img src="{% static 'writers/elefant.png' %}" alt="Elefant" class='img-comanda'>
+      </a>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <a href="https://carturesti.ro/autor/horia-roman_patapievici">
+        <img src="{% static 'writers/carturesti.jpg' %}" alt="Cărturești" class='img-comanda'>
+      </a>
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock content %}

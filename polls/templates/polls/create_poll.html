@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load widget_tweaks %} <!--render_field -->
+{% load bootstrap4 %}
+{% load static %}
+
+{% block title %}Create Poll{% endblock %}
+
+{% block content %}
+ <div class="container">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Creează un nou poll!</h2>
+            </div>
+
+            <form method="POST">
+                {% csrf_token %}
+                <div class="jumbotron">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="question" class="poll-question">Introdu întrebarea</label>
+                                {% render_field form.question class="form-control" rows="4" %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="option1" class="poll-option1">Opțiunea 1</label>
+                                {% render_field form.option_one class="form-control" %} <!-- asta e de la widget_tweaks -->
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="option2" class="poll-option2">Opțiunea 2</label>
+                                {% render_field form.option_two class="form-control" %}
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="option3" class="poll-option3">Opțiunea 3</label>
+                                {% render_field form.option_three class="form-control" %}
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="option4" class="poll-option4">Opțiunea 4</label>
+                                {% render_field form.option_four class="form-control" %}
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                    <div class="container-fluid">
+                          <button type="submit" class="btn btn-lg btn-primary" style="margin-left:300px">Postează</button>
+                    </div>
+
+            </form>
+
+        </div>
+    </div>
+  </div>
+
+{% endblock %}

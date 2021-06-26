@@ -1,0 +1,32 @@
+{% extends "groups/group_base.html" %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h4><strong>Creează un grup nou completând formularul de mai jos!</strong></h4>
+
+  <form id="groupForm" action="{% url 'groups:create' %}" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-outline-info btn-lg" value="Creează grupul">
+  </form>
+
+  <hr class="my-4">
+
+  <h3 class="post-form-h3">Apasă pe butonul de jos pentru mai multe detalii</h3>
+
+  <p>
+    <a class="btn btn-outline-info" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Despre descriere</a>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+          Subiectul mesajului tău este important pentru ceilalți utilizatori ai site-ului. Asigură-te că ești cât mai succint în prezentarea ideilor și folosești un limbaj adecvat. Descrierea grupului trebuie să atragă utilizatorul.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content  %}
