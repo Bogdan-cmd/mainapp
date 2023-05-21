@@ -14,23 +14,22 @@ class CreateGroupView(LoginRequiredMixin,generic.CreateView): #DUPA CE CINEVA SE
     #NEAPARAT LA CBV TRB SA CONECTEZ CU UN MODEL
     model = Group
 
-class SingleGroup(generic.DetailView): #DETALII DESPRE GRUPUL SPECIFIC, CA POSTURI INSIDE ETC
+class SingleGroup(generic.DetailView):
     model = Group
 
-class ListGroups(generic.ListView): #CAND CINVEVA MERGE PE PAGINA DE GRUPURI, SA VADA TOATE GRUPURILE DISPONIBILE
+class ListGroups(generic.ListView):
     model = Group
 
 class JoinGroup(LoginRequiredMixin,generic.RedirectView):
 
-    #CAND DAU JOIN INTR-UN GRUP O SA MA REDIRECTIONEZE LA PAGINA DE DETAILS
     def get_redirect_url(self,*arg,**kwargs):
         return reverse('groups:single',kwargs={"slug":self.kwargs.get("slug")})
 
-    #VERIFIC DACA PERSOANA E DEJA MEMBRU IN GRUP SI II DAU MESAJE DE EROARE CU FUNCTIILE BUILT IN
+
     def get(self,request,*args,**kwargs):
         group = get_object_or_404(Group,slug=self.kwargs.get('slug'))
 
-        try: #CREEZ UN MEMBRU IN GRUP
+        try:
             GroupMember.objects.create(user=self.request.user,group=group) #CURRENT USER
         except:
             messages.warning(self.request,'Atenție, deja esțti membru în acest grup!') #POT SA DAU MESAJ LA USER -> ESTI DEJA MEMBRU IN ACEST GRUP
@@ -51,7 +50,7 @@ class LeaveGroup(LoginRequiredMixin,generic.RedirectView):
                 user = self.request.user,
                 group__slug = self.kwargs.get('slug')
             ).get()
-        except models.GroupMember.DoesNotExist: #CAND CINEVA INCEARCA SA IASA DINTR-UN GRUP IN CARE NU E
+        except models.GroupMember.DoesNotExist: 
             messages.warning(self.request,'Nu faci parte din acest grup!')
         else:
             membership.delete()
